@@ -1,0 +1,122 @@
+<!-- 
+  File: admin-dashboard.component.html
+  Description: The HTML is updated to display the total number of bookings and a table listing them.
+-->
+<div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">Admin Panel</h2>
+        <nav>
+            <!-- <a href="#" class="active">Dashboard</a>
+            <a href="#">Users</a>
+            <a href="#">Bookings</a> <!-- Changed from Rooms -->
+            <!-- <a href="#">Reports</a> --> 
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Topbar -->
+        <header class="topbar">
+            <h2>Dashboard</h2>
+            <div class="user-profile">👤 Admin</div>
+        </header>
+
+        <!-- Stats Cards -->
+        <section class="stats">
+            <div class="card">
+                <h3>Total Users</h3>
+                <p>{{ users.length }}</p>
+            </div>
+            <!-- ✅ New card for total bookings -->
+            <div class="card">
+                <h3>Total Bookings</h3>
+                <p>{{ bookings.length }}</p>
+            </div>
+        </section>
+
+        <!-- Users Section (Add User Form & Table) -->
+        <section class="data-section">
+            <h2>User Management</h2>
+            <div class="form-container">
+                <h3>Add New User</h3>
+                <div class="form-grid">
+                    <input placeholder="Name" [(ngModel)]="newUser.name">
+                    <input placeholder="Email" [(ngModel)]="newUser.email">
+                    <input placeholder="Password" [(ngModel)]="newUser.password" type="password">
+                    <input placeholder="Phone" [(ngModel)]="newUser.phone">
+                    <button class="btn-primary" (click)="addUser()">Add User</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users">
+                            <td><input [(ngModel)]="user.name"></td>
+                            <td><input [(ngModel)]="user.email"></td>
+                            <td><input [(ngModel)]="user.phone"></td>
+                            <td class="action-buttons">
+                                <button class="btn-success" (click)="editUser(user)">Update</button>
+                                <button class="btn-danger" (click)="deleteUser(user._id)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+        <!-- Bookings Section -->
+        <section class="data-section">
+            <h2>Recent Bookings</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Room ID</th>
+                            <th>Check-in</th>
+                            <th>Check-out</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                            <th>Actions</th> <!-- ✅ New Actions column -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let booking of bookings">
+                            <!-- ✅ Fields are now editable with [(ngModel)] -->
+                            <td><input [(ngModel)]="booking.userId"></td>
+                            <td><input [(ngModel)]="booking.roomId"></td>
+                            <td><input [(ngModel)]="booking.checkIn" type="text"></td>
+                            <td><input [(ngModel)]="booking.checkOut" type="text"></td>
+                            <td><input [(ngModel)]="booking.price" type="number"></td>
+                            <td>
+                                <select [(ngModel)]="booking.bookingStatus">
+                                    <option value="confirmed">Confirmed</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="cancelled">Cancelled</option>
+                                    <option value="checked-in">Checked-in</option>
+                                    <option value="checked-out">Checked-out</option>
+                                </select>
+                            </td>
+                            <!-- ✅ New Action Buttons -->
+                            <td class="action-buttons">
+                                <button class="btn-success" (click)="updateBooking(booking)">Update</button>
+                                <button class="btn-danger" (click)="deleteBooking(booking._id)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>

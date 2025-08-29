@@ -1,0 +1,111 @@
+
+
+.footer {
+    background: rgba(20, 20, 20, 0.85);
+    color: #f1f1f1;
+    padding: 60px 20px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer h2 {
+    color: #d4af37;
+    /* Gold Hilton vibe */
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.footer h3 {
+    color: #d4af37;
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #d4af37;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 8px 0;
+}
+
+.footer ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #d4af37;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #f1f1f1;
+    margin-right: 12px;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d4af37;
+    transform: scale(1.2);
+}
+
+.footer-newsletter form {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    flex: 1;
+    border-radius: 5px 0 0 5px;
+}
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background: #d4af37;
+    color: #0b0b0c;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background 0.3s;
+}
+
+.footer-newsletter button:hover {
+    background: #b7952b;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}

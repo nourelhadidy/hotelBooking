@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Spa & Wellness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- <style>
+        /* GENERAL STYLES */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            scroll-behavior: smooth;
+            background-color: #fdfdfd;
+            color: #111827;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* HERO BANNER */
+        .spa-hero {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            border-bottom: 6px solid #caa85d;
+        }
+
+        .spa-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+            transition: transform 0.8s ease;
+        }
+
+        .spa-hero img:hover {
+            transform: scale(1.06);
+        }
+
+        .spa-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.75));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .spa-hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.4rem;
+            font-weight: 700;
+            color: #fefefe;
+            margin-bottom: 1.2rem;
+            text-shadow: 2px 4px 14px rgba(0, 0, 0, 0.65);
+            letter-spacing: 1.2px;
+        }
+
+        .spa-hero-content p {
+            font-size: 1.35rem;
+            color: #f3f4f6;
+            max-width: 780px;
+            margin: 0 auto;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        /* MISSION / SERVICES */
+        .spa-mission-container {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 5rem 2rem;
+        }
+
+        .spa-mission-block {
+            background: linear-gradient(145deg, #ffffff, #f9fafb);
+            border-radius: 22px;
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.08);
+            flex: 1 1 320px;
+            max-width: 360px;
+            text-align: center;
+            padding: 3rem 2.2rem;
+            transition: all 0.5s ease;
+            border-top: 6px solid #caa85d;
+        }
+
+        .spa-mission-block:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 28px 65px rgba(0, 0, 0, 0.16);
+        }
+
+        .spa-mission-block h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #35160d;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+        }
+
+        .spa-mission-block p {
+            color: #63594b;
+            line-height: 1.85;
+            font-weight: 400;
+            font-size: 1.08rem;
+            padding: 0 0.5rem;
+        }
+
+        /* GALLERY */
+        .spa-gallery {
+            padding: 80px 20px;
+        }
+
+        .spa-gallery h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+        }
+
+        .spa-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .spa-gallery-grid img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .spa-gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* CTA SECTION */
+        .spa-cta {
+            background: linear-gradient(135deg, #8d9095, #4f5053);
+            text-align: center;
+            padding: 5rem 2.5rem;
+            color: #ffffff;
+            border-radius: 26px;
+            margin: 5rem auto;
+            max-width: 1150px;
+            box-shadow: 0 30px 80px rgba(51, 65, 85, 0.25);
+            transition: transform 0.45s ease, box-shadow 0.45s ease;
+        }
+
+        .spa-cta:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 35px 100px rgba(30, 41, 59, 0.35);
+        }
+
+        .spa-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            letter-spacing: 1px;
+            color: #fefefe;
+        }
+
+        .spa-cta p {
+            font-size: 1.35rem;
+            margin-bottom: 2.8rem;
+            line-height: 1.9;
+            font-weight: 300;
+            color: #e2e8f0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .spa-cta .btn-primary {
+            background: linear-gradient(135deg, #caa85d, #b38b3c);
+            color: #fff;
+            padding: 1rem 2.6rem;
+            font-weight: 600;
+            border-radius: 14px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.35s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        .spa-cta .btn-primary:hover {
+            background: linear-gradient(135deg, #b38b3c, #92732f);
+            transform: translateY(-5px);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .spa-hero {
+                height: 380px;
+            }
+
+            .spa-hero-content h1 {
+                font-size: 2.4rem;
+            }
+
+            .spa-hero-content p {
+                font-size: 1.05rem;
+            }
+
+            .spa-mission-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            .spa-mission-block {
+                max-width: 95%;
+            }
+
+            .spa-cta {
+                padding: 3.5rem 2rem;
+            }
+
+            .spa-cta h2 {
+                font-size: 2rem;
+            }
+
+            .spa-cta p {
+                font-size: 1.1rem;
+            }
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="spa-hero">
+        <img src="/assets/spa3.png" alt="Luxury Spa">
+        <div class="spa-hero-overlay">
+            <div class="spa-hero-content">
+                <h1>Luxury Spa and Wellness</h1>
+                <p>Experience ultimate relaxation and rejuvenation in our world-class spa facilities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION / SERVICES -->
+    <section class="spa-mission-container">
+        <div class="spa-mission-block">
+            <h2>Massage Therapy</h2>
+            <p>Expert massage techniques to relieve tension, improve circulation, and rejuvenate your body.</p>
+        </div>
+        <div class="spa-mission-block">
+            <h2>Sauna  Steam Rooms</h2>
+            <p>Detoxify, relax, and enjoy the soothing warmth of our premium sauna and steam facilities.</p>
+        </div>
+        <div class="spa-mission-block">
+            <h2>Yoga  Meditation</h2>
+            <p>Find inner peace and balance through guided yoga and meditation sessions for all levels.</p>
+        </div>
+        <div class="spa-mission-block">
+            <h2>Beauty Treatments</h2>
+            <p>Luxury facials, body treatments, and skincare rituals tailored to your unique needs.</p>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="spa-gallery">
+        <h2>Our Facilities</h2>
+        <div class="spa-gallery-grid">
+            <img src="assets/spa.png" alt="Spa Facility">
+            <img src="assets/spa2.png" alt="Wellness Room">
+            <img src="assets/spa3.png" alt="Sauna Room">
+            <img src="assets/yoga.png" alt="Meditation Room">
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="spa-cta">
+        <h2>Indulge in Luxury Wellness</h2>
+        <p>Relax, refresh, and rejuvenate in an extraordinary spa experience tailored just for you.</p>
+        <button class="btn-primary" routerLink="/booking">Book Your Experience</button>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+<!-- src/app/payment/payment.component.html -->
+<div class="payment-page">
+    <h1>Payment Summary</h1>
+    <p>Room: {{ room?.type }}</p>
+    <p>Nights: {{ room?.nights }}</p>
+    <p>Total: ${{ room?.totalPrice }}</p>
+    <button class="btn-primary" (click)="payNow()">Pay Now</button>
+</div>

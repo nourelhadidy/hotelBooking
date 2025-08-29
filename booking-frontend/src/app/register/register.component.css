@@ -1,0 +1,225 @@
+/* Wrapper Layout */
+.login-wrapper {
+    display: flex;
+    height: 100vh;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #0f172a, #16213e);
+}
+
+/* Left Section (Luxury Branding) */
+.login-left {
+    flex: 1;
+    position: relative;
+    background: url("/assets/hotelCover.png") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    box-shadow: inset -8px 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.login-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(23, 23, 23, 0.8);    /* dark overlay */
+}
+
+.brand {
+    position: relative;
+    z-index: 1;
+}
+
+.brand h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: "Playfair Display", serif;
+}
+
+.brand h1 span {
+    color: #d4af37;
+    /* Hilton Gold */
+}
+
+.brand p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    opacity: 0.95;
+    max-width: 420px;
+    line-height: 1.7;
+}
+
+.illustration {
+    position: relative;
+    z-index: 1;
+}
+
+.illustration img {
+    margin-top: 40px;
+    max-width: 280px;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.6));
+}
+
+/* Right Section (Form Box) */
+.login-right {
+    flex: 1;
+    background: #fdfdfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.form-box {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    border-top: 5px solid #d4af37;
+}
+
+.form-box h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+}
+
+.form-box p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Inputs */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    font-size: 0.95rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    outline: none;
+}
+
+/* Options */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 22px;
+    color: #444;
+}
+
+.options a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+/* Luxury Button */
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #d4af37, #e1c067);
+    color: #0f172a;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #b68f2a, #d1b24a);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(212, 175, 55, 0.55);
+}
+
+/* Signup */
+.signup-text {
+    margin-top: 24px;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.signup-text a {
+    color: #0f172a;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    color: #d4af37;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .login-wrapper {
+        flex-direction: column;
+    }
+
+    .login-left {
+        display: none;
+        /* hide hotel branding for mobile */
+    }
+
+    .login-right {
+        flex: 1;
+        padding: 30px;
+    }
+}

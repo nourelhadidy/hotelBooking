@@ -1,0 +1,238 @@
+   /* GENERAL STYLES */
+   body {
+       font-family: 'Inter', sans-serif;  
+       margin: 0;
+       scroll-behavior: smooth;
+       background-color: #fafafa;
+       color: #1e1e1e;
+   }
+
+   a {
+       text-decoration: none;
+   }
+
+   /* HERO BANNER */
+   .spa-hero {
+       position: relative;
+       height: 600px;
+       overflow: hidden;
+       border-bottom: 6px solid #caa85d;
+   }
+
+   .spa-hero img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       filter: brightness(0.6);
+       transition: transform 0.8s ease, filter 0.5s ease;
+   }
+
+   .spa-hero img:hover {
+       transform: scale(1.05);
+       filter: brightness(0.7);
+   }
+
+   .spa-hero-overlay {
+       position: absolute;
+       inset: 0;
+       background: linear-gradient(to bottom, rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.75));
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       padding: 0 2rem;
+   }
+
+   .spa-hero-content h1 {
+       font-family: 'Playfair Display', serif;
+       font-size: 4rem;
+       font-weight: 700;
+       color: #fdfdfd;
+       margin-bottom: 1rem;
+       text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.7);
+       letter-spacing: 1.5px;
+   }
+
+   .spa-hero-content p {
+       font-size: 1.5rem;
+       color: #f5f5f5;
+       max-width: 750px;
+       margin: 0 auto;
+       line-height: 1.8;
+       font-weight: 300;
+   }
+
+   /* MISSION / SERVICES */
+   .spa-mission-container {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 2.5rem;
+       justify-content: center;
+       padding: 6rem 2rem;
+   }
+
+   .spa-mission-block {
+       background: linear-gradient(145deg, #ffffff, #f7f7f7);
+       border-radius: 25px;
+       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+       flex: 1 1 320px;
+       max-width: 360px;
+       text-align: center;
+       padding: 3rem 2.5rem;
+       border-top: 6px solid #caa85d;
+       transition: all 0.5s ease;
+   }
+
+   .spa-mission-block:hover {
+       transform: translateY(-10px);
+       box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+   }
+
+   .spa-mission-block h2 {
+       font-family: 'Playfair Display', serif;
+       font-size: 2.2rem;
+       color: #2b1e12;
+       margin-bottom: 1rem;
+       font-weight: 700;
+       letter-spacing: 1px;
+   }
+
+   .spa-mission-block p {
+       color: #55514f;
+       line-height: 1.85;
+       font-weight: 400;
+       font-size: 1.1rem;
+   }
+
+   /* GALLERY */
+   .spa-gallery {
+       padding: 100px 20px;
+       background: #fdfdfd;
+   }
+
+   .spa-gallery h2 {
+       text-align: center;
+       font-size: 3rem;
+       font-family: 'Playfair Display', serif;
+       font-weight: 700;
+       margin-bottom: 50px;
+       color: #2c2c2c;
+   }
+
+  /* GALLERY */
+  .spa-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+  }
+
+  .spa-gallery-grid img {
+      width: 100%;
+      height: 250px;
+      /* 👈 fixed height for consistency */
+      object-fit: cover;
+      /* 👈 keeps aspect ratio, crops if needed */
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .spa-gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  }
+
+   /* CALL TO ACTION */
+   .spa-cta {
+       background: linear-gradient(135deg, #4f4c4b, #1e1c1c);
+       text-align: center;
+       padding: 6rem 2.5rem;
+       color: #fff;
+       border-radius: 28px;
+       margin: 5rem auto;
+       max-width: 1150px;
+       box-shadow: 0 30px 80px rgba(30, 30, 30, 0.25);
+       transition: transform 0.45s ease, box-shadow 0.45s ease;
+   }
+
+   .spa-cta:hover {
+       transform: translateY(-8px);
+       box-shadow: 0 35px 100px rgba(0, 0, 0, 0.35);
+   }
+
+   .spa-cta h2 {
+       font-family: 'Playfair Display', serif;
+       font-size: 2.8rem;
+       font-weight: 700;
+       margin-bottom: 1.5rem;
+       letter-spacing: 1px;
+   }
+
+   .spa-cta p {
+       font-size: 1.45rem;
+       margin-bottom: 3rem;
+       line-height: 1.9;
+       font-weight: 300;
+       max-width: 850px;
+       margin-left: auto;
+       margin-right: auto;
+   }
+
+   .spa-cta .btn-primary {
+       background: linear-gradient(135deg, #caa85d, #b38b3c);
+       color: #fff;
+       padding: 1.1rem 3rem;
+       font-weight: 600;
+       border-radius: 16px;
+       border: none;
+       cursor: pointer;
+       font-size: 1.25rem;
+       transition: all 0.35s ease;
+       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+   }
+
+   .spa-cta .btn-primary:hover {
+       background: linear-gradient(135deg, #b38b3c, #92732f);
+       transform: translateY(-5px);
+       box-shadow: 0 16px 38px rgba(0, 0, 0, 0.25);
+   }
+
+   /* RESPONSIVE */
+   @media (max-width: 768px) {
+       .spa-hero {
+           height: 400px;
+       }
+
+       .spa-hero-content h1 {
+           font-size: 2.6rem;
+       }
+
+       .spa-hero-content p {
+           font-size: 1.1rem;
+       }
+
+       .spa-mission-container {
+           flex-direction: column;
+           align-items: center;
+       }
+
+       .spa-mission-block {
+           max-width: 90%;
+       }
+
+       .spa-gallery-grid {
+           grid-template-columns: 1fr;
+       }
+
+       .spa-cta {
+           padding: 4rem 1.5rem;
+       }
+
+       .spa-cta h2 {
+           font-size: 2.2rem;
+       }
+
+       .spa-cta p {
+           font-size: 1.2rem;
+       }
+   }

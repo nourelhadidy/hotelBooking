@@ -1,0 +1,89 @@
+<div class="booking-page">
+    <!-- Hero Section with booking form -->
+    <div class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <!-- Left Side: Text & Form -->
+                <div class="hero-left">
+                    <h1>Book Your Luxury Stay</h1>
+
+                    <!-- Booking Form -->
+                    <form [formGroup]="searchForm" (ngSubmit)="onSearchRooms()" class="hero-booking-form">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="checkIn">Check-in</label>
+                                <input type="date" id="checkIn" formControlName="checkIn" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="checkOut">Check-out</label>
+                                <input type="date" id="checkOut" formControlName="checkOut" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="guests">Guests</label>
+                                <select id="guests" formControlName="guests" required>
+                                    <option [value]="1">1 Guest</option>
+                                    <option [value]="2">2 Guests</option>
+                                    <option [value]="3">3 Guests</option>
+                                    <option [value]="4">4 Guests</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            {{ searchingRooms ? 'Searching...' : 'Check Availability' }}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rooms Section -->
+    <section class="rooms-section">
+        <h2>Available Rooms</h2>
+        <div class="rooms-grid">
+            <div class="room-card" *ngFor="let room of availableRooms" (click)="selectRoom(room)">
+                <img [src]="'assets/' + room.type.toLowerCase() + 'Room.png'" [alt]="room.type + ' Room'"
+                    onerror="this.src='assets/singleRoom.jpg'" class="room-image">
+
+                <div class="room-details">
+                    <h3>{{ room.type }} Room</h3>
+                    <p>{{ room.description }}</p>
+
+                    <!-- Facilities -->
+                    <div class="facilities">
+                        <div class="facility"><i class="fas fa-wifi"></i> Wi-Fi</div>
+                        <div class="facility"><i class="fas fa-tv"></i> TV</div>
+                        <div class="facility"><i class="fas fa-cocktail"></i> Minibar</div>
+                        <div class="facility"><i class="fas fa-bread-slice"></i> Breakfast</div>
+                        <div class="facility"><i class="fas fa-snowflake"></i> AC</div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="services">
+                        <div class="service"><i class="fas fa-concierge-bell"></i> Room Service</div>
+                        <div class="service"><i class="fas fa-swimming-pool"></i> Pool</div>
+                        <div class="service"><i class="fas fa-dumbbell"></i> Gym</div>
+                        <div class="service"><i class="fas fa-parking"></i> Parking</div>
+                    </div>
+
+                    <p class="price">${{ room.pricePerNight }} / night</p>
+                    <button (click)="selectRoom(room)">Select Room</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Room Summary -->
+    <section class="selected-room-summary" *ngIf="selectedRoom">
+        <div class="summary-card">
+            <h3>Selected Room: {{ selectedRoom.type }}</h3>
+            <p>Check-in: {{ searchForm.get('checkIn')?.value | date }}</p>
+            <p>Check-out: {{ searchForm.get('checkOut')?.value | date }}</p>
+            <p>Guests: {{ searchForm.get('guests')?.value }}</p>
+            <p>Total: ${{ selectedRoom.totalPrice }} ({{ selectedRoom.nights }} nights)</p>
+            <button style="cursor: pointer;padding: 20px;" (click)="confirmBooking()">
+                Confirm Booking
+            </button>
+        </div>
+    </section>
+</div>

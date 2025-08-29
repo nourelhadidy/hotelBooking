@@ -1,0 +1,198 @@
+.about-page {
+    font-family: 'Inter', sans-serif;
+    background-color: #fdfdfd;
+    color: #111827;
+    padding: 0;
+    margin: 0;
+}
+
+/* Hero Section */
+.about-hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    border-bottom: 6px solid #caa85d;
+    /* gold accent */
+}
+
+.about-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: transform 0.8s ease;
+}
+
+.about-hero img:hover {
+    transform: scale(1.06);
+}
+
+.about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.75));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.about-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.4rem;
+    font-weight: 700;
+    color: #fefefe;
+    margin-bottom: 1.2rem;
+    text-shadow: 2px 4px 14px rgba(0, 0, 0, 0.65);
+    letter-spacing: 1.2px;
+}
+
+.about-hero-content p {
+    font-size: 1.35rem;
+    color: #f3f4f6;
+    max-width: 780px;
+    margin: 0 auto;
+    line-height: 1.9;
+    font-weight: 300;
+}
+
+/* Mission, Vision, Promise */
+.about-mission-container {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5rem 2rem;
+}
+
+.about-mission-block {
+    background: linear-gradient(145deg, #ffffff, #f9fafb);
+    border-radius: 22px;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.08);
+    flex: 1 1 320px;
+    max-width: 360px;
+    text-align: center;
+    padding: 3rem 2.2rem;
+    transition: all 0.5s ease;
+    border-top: 6px solid #caa85d;
+    /* luxury gold */
+}
+
+.about-mission-block:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 28px 65px rgba(0, 0, 0, 0.16);
+}
+
+.about-mission-block h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #35160d;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.about-mission-block p {
+    color: #63594b;
+    line-height: 1.85;
+    font-weight: 400;
+    font-size: 1.08rem;
+    padding: 0 0.5rem;
+}
+
+/* Call to Action */
+/* Call to Action */
+.about-cta {
+    background: linear-gradient(135deg, #8d9095, #4f5053);
+    /* blue-grey gradient */
+    text-align: center;
+    padding: 5rem 2.5rem;
+    color: #ffffff;
+    border-radius: 26px;
+    margin: 5rem auto;
+    max-width: 1150px;
+    box-shadow: 0 30px 80px rgba(51, 65, 85, 0.25);
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.about-cta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 35px 100px rgba(30, 41, 59, 0.35);
+}
+
+.about-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+    color: #fefefe;
+}
+
+.about-cta p {
+    font-size: 1.35rem;
+    margin-bottom: 2.8rem;
+    line-height: 1.9;
+    font-weight: 300;
+    color: #e2e8f0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-cta .btn-primary {
+    background: linear-gradient(135deg, #caa85d, #b38b3c);
+    color: #fff;
+    padding: 1rem 2.6rem;
+    font-weight: 600;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.35s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.about-cta .btn-primary:hover {
+    background: linear-gradient(135deg, #b38b3c, #92732f);
+    transform: translateY(-5px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-hero {
+        height: 380px;
+    }
+
+    .about-hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .about-hero-content p {
+        font-size: 1.05rem;
+    }
+
+    .about-mission-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .about-mission-block {
+        max-width: 95%;
+    }
+
+    .about-cta {
+        padding: 3.5rem 2rem;
+    }
+
+    .about-cta h2 {
+        font-size: 2rem;
+    }
+
+    .about-cta p {
+        font-size: 1.1rem;
+    }
+}

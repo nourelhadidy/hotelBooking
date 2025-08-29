@@ -1,0 +1,82 @@
+<!-- Hero Section -->
+<section class="hero">
+    <div class="overlay">
+        <h1 style="color: rgb(255, 255, 255);">Welcome to Hilton Luxury</h1>
+
+        <!-- <p class="subtitlewhite">Where timeless elegance meets unforgettable experiences</p> -->
+        <button routerLink="/booking" class="btn-book">Book Your Stay</button>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+    <div class="about-text">
+        <h2>Discover Hilton Luxury</h2>
+        <p>
+            Experience a sanctuary where luxury, comfort, and world-class hospitality
+            meet. Whether you're on a business trip, romantic getaway, or family
+            retreat, Hilton promises unmatched elegance and service.
+        </p>
+        <p>
+            From award-winning dining to rejuvenating spa treatments, every detail is
+            designed to indulge your senses and make your stay truly extraordinary.
+        </p>
+    </div>
+    <div class="about-img">
+        <img src="assets/hotelHome.png" alt="Hilton Luxury">
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services">
+    <h2>World-Class Amenities</h2>
+    <p class="section-subtitle">
+        Designed to make your stay exceptional in every way.
+    </p>
+    <div class="service-grid">
+        <div class="service-card">
+            <i class="fas fa-utensils"></i>
+            <h3>Fine Dining</h3>
+            <p>Gourmet cuisine crafted by internationally renowned chefs.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-spa"></i>
+            <h3>Luxury Spa</h3>
+            <p>Relax with soothing treatments and holistic therapies.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-swimming-pool"></i>
+            <h3>Infinity Pool</h3>
+            <p>Unwind with panoramic views from our signature pool.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-concierge-bell"></i>
+            <h3>24/7 Concierge</h3>
+            <p>Personalized service at any hour of the day or night.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Rooms Section -->
+<section class="rooms">
+    <h2>Our Signature Rooms</h2>
+    <p class="section-subtitle">
+        Sophisticated interiors, breathtaking views, and unparalleled comfort.
+    </p>
+    <div class="room-cards">
+        <div *ngFor="let room of rooms" class="room-card">
+            <img [src]="room.image" alt="{{ room.name }}">
+            <h3>{{ room.name }}</h3>
+            <p class="price">{{ room.price }} EGP / night</p>
+            <button (click)="goToBooking(room.id)">Book Now</button>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="about-cta">
+    <h2>Indulge in Hilton Luxury</h2>
+    <p>From serene suites to breathtaking resorts, your extraordinary journey begins here.</p>
+    <button class="btn-primary" routerLink="/booking">Book Your Stay</button>
+</section>
+<app-contact></app-contact>

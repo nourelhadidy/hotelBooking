@@ -1,0 +1,46 @@
+<div class="dashboard-container">
+    <!-- Welcome Header -->
+    <div class="welcome-card">
+        <h2>Welcome, {{ user?.name }} 👋</h2>
+        <p *ngIf="user">Here’s your personalized dashboard.</p>
+        <p *ngIf="!user">Please log in to view your dashboard.</p>
+    </div>
+
+    <!-- User Info Section -->
+    <div class="user-info-card" *ngIf="user">
+        <h3>Profile Information</h3>
+        <div class="user-info">
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Phone:</strong> {{ user.phone || 'Not provided' }}</p>
+            <p><strong>Member Since:</strong> {{ user.createdAt | date }}</p>
+        </div>
+    </div>
+
+    <!-- Bookings Section -->
+    <div class="bookings-card">
+        <h3>Your Bookings</h3>
+
+        <div *ngIf="bookings.length > 0; else noBookings">
+            <div class="booking-grid">
+                <div class="booking-card" *ngFor="let booking of bookings">
+                    <h4>Room: {{ booking.roomId }}</h4>
+                    <p><strong>Check-in:</strong> {{ booking.checkIn | date }}</p>
+                    <p><strong>Check-out:</strong> {{ booking.checkOut | date }}</p>
+                    <p><strong>Status:</strong>
+                        <span class="status" [ngClass]="{
+              'confirmed': booking.status === 'confirmed',
+              'pending': booking.status === 'pending',
+              'cancelled': booking.status === 'cancelled'
+            }">
+                            {{ booking.status | titlecase }}
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <ng-template #noBookings>
+            <p class="empty-message">You don’t have any bookings yet. Book a room now!</p>
+        </ng-template>
+    </div>
+</div>

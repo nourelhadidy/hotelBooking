@@ -1,0 +1,107 @@
+/* ==============================
+   Luxury Navbar Styling
+   ============================== */
+
+/* Navbar Container */
+.navbar {
+    background: rgba(15, 15, 15, 0.9);
+    /* Glassy black */
+    color: #fff;
+    padding: 25px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+    /* Glass effect */
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    /* Subtle golden line */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* Logo */
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #f5d76e;
+    /* Gold */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: linear-gradient(90deg, #ffd700, #f5d76e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Gradient text */
+    transition: all 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+    text-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 45px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    font-family: "Poppins", sans-serif;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 6px 0;
+}
+
+/* Hover underline with gold glow */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ffd700, #f5d76e);
+    box-shadow: 0px 0px 8px rgba(255, 215, 0, 0.8);
+    transition: width 0.4s ease;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Call-to-action Button (Luxury Style) */
+.nav-btn {
+    padding: 10px 22px;
+    background: linear-gradient(135deg, #ffd700, #f5d76e);
+    border-radius: 30px;
+    color: #111;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.4);
+    transition: all 0.4s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(255, 215, 0, 0.6);
+}
