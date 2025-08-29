@@ -6,6 +6,11 @@ The **Hotel Booking Application** is a full-stack web application for hotel mana
 Built with **Angular** (frontend) and **Node.js + Express + MongoDB** (backend), this project provides a scalable, maintainable, and user-friendly system for hotel management.
 
 ---
+<img width="1851" height="864" alt="image" src="https://github.com/user-attachments/assets/fe583032-b152-441b-aa45-e5fb751b06c9" />
+
+<img width="1881" height="790" alt="image" src="https://github.com/user-attachments/assets/634daa68-656c-4785-9f0c-1e46e15cfe1a" />
+<img width="1884" height="861" alt="image" src="https://github.com/user-attachments/assets/6fdba2d5-00e9-4074-9a2e-dc4a767521f5" />
+
 
 ## Features
 
