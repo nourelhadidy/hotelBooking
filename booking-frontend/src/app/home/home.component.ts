@@ -19,9 +19,9 @@ export class HomeComponent {
   // Navigate to booking page
   goToBooking(roomId?: number) {
     if (roomId) {
-      this.router.navigate(['/booking', roomId]);
+      this.router.navigate(['/login', roomId]);
     } else {
-      this.router.navigate(['/booking']);
+      this.router.navigate(['/login']);
     }
   }
 
