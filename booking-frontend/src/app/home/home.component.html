@@ -4,7 +4,7 @@
         <h1 style="color: rgb(255, 255, 255);">Welcome to Hilton Luxury</h1>
 
         <!-- <p class="subtitlewhite">Where timeless elegance meets unforgettable experiences</p> -->
-        <button routerLink="/booking" class="btn-book">Book Your Stay</button>
+        <button routerLink="/login" class="btn-book">Book Your Stay</button>
     </div>
 </section>
 
@@ -68,7 +68,7 @@
             <img [src]="room.image" alt="{{ room.name }}">
             <h3>{{ room.name }}</h3>
             <p class="price">{{ room.price }} EGP / night</p>
-            <button (click)="goToBooking(room.id)">Book Now</button>
+            <!-- <button (click)="goToBooking(room.id)">Book Now</button> -->
         </div>
     </div>
 </section>
@@ -77,6 +77,6 @@
 <section class="about-cta">
     <h2>Indulge in Hilton Luxury</h2>
     <p>From serene suites to breathtaking resorts, your extraordinary journey begins here.</p>
-    <button class="btn-primary" routerLink="/booking">Book Your Stay</button>
+    <button class="btn-primary" routerLink="/login">Book Your Stay</button>
 </section>
 <app-contact></app-contact>
