@@ -21,7 +21,7 @@ export class LoginComponent {
         if (res.data.user.role === 'admin') {
           this.router.navigate(['/admin']);
         } else {
-          this.router.navigate(['/home']); // Redirect to home page after successful login
+          this.router.navigate(['/booking']); // Redirect to booking page after successful login
         }
       },
       error: (err) => alert(err.error.error || 'Login failed')
