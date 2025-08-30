@@ -147,13 +147,82 @@
     transform: scale(1.02);
 }
 
-/* Responsive */
+/* ============================
+   Responsive Breakpoints
+   ============================ */
+
+/* Tablets (up to 1024px) */
 @media (max-width: 1024px) {
     .contact-content {
         flex-direction: column;
+        gap: 30px;
     }
 
     .map-block {
         height: 300px;
+    }
+}
+
+/* Large Phones (up to 768px) */
+@media (max-width: 768px) {
+    .contact-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact-header p {
+        font-size: 1rem;
+    }
+
+    .contact-form-card,
+    .info-block {
+        padding: 25px;
+    }
+
+    .btn-submit {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .map-block {
+        height: 250px;
+    }
+}
+
+/* Small Phones (up to 480px) */
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 40px 15px;
+    }
+
+    .contact-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .contact-header p {
+        font-size: 0.95rem;
+    }
+
+    .contact-content {
+        gap: 20px;
+    }
+
+    .contact-form-card,
+    .info-block {
+        padding: 20px;
+    }
+
+    .contact-form-card form input,
+    .contact-form-card form textarea {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+    }
+
+    .btn-submit {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .map-block {
+        height: 200px;
     }
 }
